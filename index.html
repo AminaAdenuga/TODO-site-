@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Todo App" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
+    <meta name="author" content="Aminat Adenuga" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/245-2456104_png-transparent-icon-todo-list-png-download-removebg-preview (3).png"
+    />
+    <script defer src="./todo.js"></script>
+    <link rel="stylesheet" href="./todo.css" class="" />
+
+    <title>MyTodo App</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(104, 96%, 33%);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header>
+        <h1 class="todo-logo">Todo</h1>
+        <img
+          src="./images/icon-moon.svg"
+          alt="Moon icon"
+          class="icon-toggle-sun"
+        />
+      </header>
+
+      <main>
+        <form action="" method="get" id="form" class="form-input-value">
+          <input type="checkbox" class="input-checkboxes" />
+
+          <input
+            type="text"
+            required
+            placeholder="e.g Buy groceries"
+            id="input-input-value"
+            aria-required="true"
+            autofocus
+            autocomplete="off"
+          />
+        </form>
+      </main>
+
+      <article class="">
+        <ul id="ulElem">
+          <div class="div-li-elem">
+            <div class="li" id="reorder_container">
+              <div class="liElem">
+                <div class="checkbox-spantext">
+                  <input
+                    type="checkbox"
+                    class="input-checkboxes"
+                    onload="checked()"
+                    id="input-checkbox1"
+                  />
+                  <span contenteditable="false" id="span_text1"
+                    >Hit the gym</span
+                  >
+                </div>
+                <button
+                  onclick="removeItem('btn_1')"
+                  class="remove-btn"
+                  id="btn_1"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      fill="#494C6B"
+                      fill-rule="evenodd"
+                      d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <div class="liElem">
+                <div class="checkbox-spantext">
+                  <input
+                    onChange="toggleCompleted(0)"
+                    type="checkbox"
+                    class="input-checkboxes"
+                    id="input-checkbox0"
+                  />
+                  <span contenteditable="false" id="span_text0"
+                    >Go shopping</span
+                  >
+                </div>
+                <button
+                  onclick="removeItem('btn_0')"
+                  class="remove-btn"
+                  id="btn_0"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                  >
+                    <path
+                      fill="#494C6B"
+                      fill-rule="evenodd"
+                      d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="bottom-Li-Line">
+              <p class="bottom-gray-paragraph1">
+                <span class="num-index">0</span> items left
+              </p>
+              <div class="bottom-links">
+                <p data-id="all" class="filter_btn active">All</p>
+                <p data-id="active" class="filter_btn">Active</p>
+                <p data-id="completed" class="filter_btn">Completed</p>
+              </div>
+              <p
+                class="bottom-gray-paragraph2"
+                onclick="clearCompleted('clear_0')"
+              >
+                Clear Completed
+              </p>
+            </div>
+          </div>
+        </ul>
+      </article>
+
+      <div class="bottom-link">
+        <p data-id="all" class="filter_btn active">All</p>
+        <p data-id="active" class="filter_btn">Active</p>
+        <p data-id="completed" class="filter_btn">Completed</p>
+      </div>
+
+      <div class="text">Drag and drop to reorder list</div>
+    </section>
+
+    <div class="attribution">
+      Coded by
+      <a href="https://twitter.com/aminat_adenuga" target="_blank"
+        >Amina Adenuga</a
+      >.
+    </div>
+  </body>
+</html>

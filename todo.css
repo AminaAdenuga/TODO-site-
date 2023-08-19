@@ -1,0 +1,267 @@
+/* stylesheets */
+
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Dancing+Script:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Great+Vibes&family=Josefin+Sans:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lato:ital,wght@1,300;1,400&family=Montserrat:wght@500;700&family=Open+Sans:wght@300&family=Outfit&family=Overpass:wght@400;700&family=Pacifico&family=Poppins:wght@300&display=swap");
+
+/* universal styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin sans";
+}
+section {
+  overflow: hidden;
+}
+/* universal styles for header and main*/
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+header .icon-toggle-sun {
+  width: 2.2em;
+  height: 2.2em;
+}
+header .todo-logo {
+  font-size: 25px;
+  color: hsl(0, 0%, 98%);
+  text-transform: uppercase;
+  letter-spacing: 13px;
+}
+form {
+  display: flex;
+  gap: 12px;
+  padding: 15px;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+}
+.form-dark-toggle {
+  background-color: black;
+}
+#input-input-value {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.input-input-dark-toggle {
+  color: white;
+}
+/* styling for the checkbox in the form-input-input-value */
+.input-checkboxes {
+  appearance: none;
+  margin: 0;
+  background-color: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  opacity: 0.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid hsl(234, 11%, 52%);
+}
+.check {
+  background: linear-gradient(
+    100deg,
+    rgb(120, 186, 239) 0%,
+    rgba(189, 45, 253, 1) 100%
+  );
+}
+.check::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='9'%3E%3Cpath fill='none' stroke='%23FFF' stroke-width='2' d='M1 4.304L3.696 7l6-6'/%3E%3C/svg%3E");
+}
+.text {
+  text-align: center;
+  font-size: 10px;
+}
+/* universal styles for header and main*/
+
+/* universal styles for article li section*/
+
+.div-li-elem {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 3px;
+}
+.div-li-elem-dark {
+  background-color: black;
+  color: white;
+}
+
+.checkbox-spantext {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  cursor: move;
+}
+.liElem {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+.remove-btn {
+  border: none;
+  outline: none;
+  opacity: 0.9;
+  background-color: transparent;
+}
+.completed {
+  text-decoration: line-through;
+  color: gray;
+  opacity: 0.9;
+}
+.lastItem {
+  margin-top: 3rem;
+  font-size: 14px;
+  text-align: center;
+  color: gray;
+  opacity: 0.9;
+}
+/* drag and drop */
+.reorder .liElem.hint {
+  border: 1px solid #ffc49a;
+  background: #feffb4;
+}
+.reorder .liElem.active {
+  border: 1px solid #ffa5a5;
+  background: #ffe7e7;
+}
+
+@media (max-width: 376px) {
+  /* Styles for mobile devices */
+  body {
+    font-size: 45%;
+    max-width: 100%;
+    height: 100%;
+    font-family: "Josefin Sans", sans-serif;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url("images/bg-mobile-light.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .body-dark-toggle {
+    background-color: hsl(235, 21%, 11%);
+    background-image: url("images/bg-mobile-dark.jpg");
+    background-repeat: no-repeat;
+  }
+  .bottom-Li-Line {
+    padding: 10px 20px 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: gray;
+    opacity: 0.9;
+  }
+  .bottom-links {
+    visibility: hidden;
+    padding: 0;
+  }
+  .bottom-link {
+    margin-top: 1rem;
+    /* color: black; */
+    /* background-color: white; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    margin-bottom: 1.5rem;
+    padding: 20px;
+    justify-content: center;
+    gap: 15px;
+    font-size: 15px;
+  }
+
+  .bottom-link-dark-toggle {
+    background-color: black;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .bottom-link .filter_btn.active {
+    color: blue;
+  }
+  .bottom-link .filter_btn:hover {
+    color: blue;
+  }
+
+  section {
+    margin: 2.5rem 1.5rem;
+  }
+  #ulElem {
+    font-size: 14px;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    list-style-type: none;
+    max-inline-size: 370px;
+  }
+}
+
+@media all and (min-width: 377px) {
+  /* Styles for desktop devices */
+  body {
+    font-size: 62.5%;
+    background-color: hsl(0, 0%, 98%);
+    background-image: url("images/bg-desktop-light.jpg");
+    background-repeat: no-repeat;
+  }
+  .body-dark-toggle {
+    background-color: hsl(235, 21%, 11%);
+    background-image: url("images/bg-desktop-dark.jpg");
+    background-repeat: no-repeat;
+  }
+
+  section {
+    max-width: 375px;
+    margin: 9rem auto 2rem auto;
+  }
+  .bottom-Li-Line {
+    padding: 20px;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    color: gray;
+    opacity: 0.9;
+  }
+  .bottom-link {
+    visibility: hidden;
+  }
+  .bottom-links .filter_btn.active {
+    color: blue;
+  }
+  .bottom-links {
+    display: flex;
+    gap: 12px;
+  }
+  #ulElem {
+    font-size: 14px;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    list-style-type: none;
+    max-inline-size: 375px;
+  }
+  .bottom-links p:hover {
+    color: blue;
+  }
+  .lastItem {
+    margin-top: 0.7rem;
+  }
+
+  @media all and (min-width: 1440px) {
+    body {
+      font-size: 62.5%;
+      background-color: hsl(0, 0%, 98%);
+      background-image: url("images/bg-desktop-light.jpg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    section {
+      max-width: 550px;
+    }
+    #ulElem {
+      max-width: 550px;
+    }
+
+    .bottom-link {
+      visibility: hidden;
+    }
+  }
+}
